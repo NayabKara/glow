@@ -1,0 +1,35 @@
+<%- include('../partials/header') %>
+
+
+<section id="show-page">
+  <div>Brand: </div>
+  <div><%= sunscreen.brand %></div>
+  <div>SPF: </div>
+  <div><%= sunscreen.SPF %></div>
+  <div>Price: </div>
+  <div><%= sunscreen.price %></div>
+  <div>Notes: </div>
+  <div><%= sunscreen.notes.join(', ') %></div>
+  <div>Like?: </div>
+  <div><%= sunscreen.like ? 'Yes' : 'No' %></div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<%- include('../partials/footer') %>

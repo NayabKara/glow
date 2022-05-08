@@ -2,8 +2,8 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema
 
 const sunscreenSchema = new Schema ({
-  SPF: String,
   brand: String,
+  SPF: String,
   price: String,
   notes: [String], 
   like: Boolean

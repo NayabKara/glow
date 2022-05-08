@@ -1,31 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel='stylesheet' href='/stylesheets/style.css' />
-  <title>Document</title>
-</head>
-<body>
-  <h2>Enter a New Sunscreen</h2>
+<%- include('../partials/header') %>
+
+<h2>Enter a New Sunscreen</h2>
 <form action="/sunscreens" method="POST">
-  <label>SPF:
-    <input type="text" name="SPF">
-  </label><br>
-  <label>Brand:
-    <input type="text" name="brand">
-  </label><br>
-  <label>Price:
-    <input type="text" name="price">
-  </label><br>
-  <label>Notes:
-    <input type="text" name="notes">
-  </label><br>
-  <label>Like:
-    <input type="checkbox" name="like" checked>
-  </label><br>
-  <input type="submit" value="New Sunscreen">
+  <label
+    >Brand:
+    <input type="text" name="brand" /> </label
+  ><br />
+  <label
+  >SPF:
+  <input type="text" name="SPF" /> </label
+><br />
+  <label
+    >Price:
+    <input type="text" name="price" /> </label
+  ><br />
+  <label
+    >Notes:
+    <input type="text" name="notes" /> </label
+  ><br />
+  <label
+    >Like:
+    <input type="checkbox" name="like" checked /> </label
+  ><br />
+  <input type="submit" value="New Sunscreen" />
 </form>
-</body>
-</html> 
+
+<%- include('../partials/footer') %>

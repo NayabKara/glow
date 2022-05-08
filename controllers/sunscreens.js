@@ -1,11 +1,13 @@
 //const { create } = require("../models/sunscreen")
+const req = require('express/lib/request');
 const sunscreen = require('../models/sunscreen');
 const Sunscreen = require('../models/sunscreen')
 
 module.exports = {
   new: newSunscreen,
   create,
-  index
+  index,
+  show
 }
 
 function newSunscreen(req, res) {
@@ -37,3 +39,10 @@ function index(req, res) {
     res.render('sunscreens/index', { sunscreens });
   });
 }
+
+function show(req, res) {
+  Sunscreen.findById(req.params.id, function(err, sunscreen) {
+    res.render('sunscreens/show', { title: 'Sunscreen Details', sunscreen });
+  });
+}
+
