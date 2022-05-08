@@ -13,7 +13,32 @@
   <div>Like?: </div>
   <div><%= sunscreen.like ? 'Yes' : 'No' %></div>
 </section>
+<br><br><h2>Reviews</h2>
 
+<% if (sunscreen.reviews.length) { %>
+  <table>
+    <thead>
+      <tr>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% sunscreen.reviews.forEach(function(r) { %>
+      <tr>
+        <td><%= r.content %> </td>
+      </tr>
+      <% }) %>
+    </tbody>
+  </table>
+<% }  else { %>
+  <h5>No Reviews Yet</h5>
+<% } %>
+<form id="add-review-form" method="POST"
+  action="/sunscreens/<%= sunscreen._id %>/reviews">
+  <label>Review:</label>
+  <textarea name="content"></textarea>
+  <input type="submit" value="Add Review">
+</form>
 
 
 
