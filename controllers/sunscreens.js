@@ -1,5 +1,6 @@
 //const { create } = require("../models/sunscreen")
 const req = require('express/lib/request');
+const { estimatedDocumentCount } = require('../models/sunscreen');
 const sunscreen = require('../models/sunscreen');
 const Sunscreen = require('../models/sunscreen')
 
@@ -7,7 +8,9 @@ module.exports = {
   new: newSunscreen,
   create,
   index,
-  show
+  show,
+  delete: deleteSunscreen,
+  
 }
 
 function newSunscreen(req, res) {
@@ -45,4 +48,13 @@ function show(req, res) {
     res.render('sunscreens/show', { title: 'Sunscreen Details', sunscreen });
   });
 }
+
+
+function deleteSunscreen(req, res) {
+  Sunscreen.findByIdAndDelete(req.params.id, function(err){
+    if(err) return res.send(err)
+    res.redirect('/sunscreens');
+  })
+}
+
 

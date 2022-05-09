@@ -12,7 +12,8 @@ router.post('/', sunscreensCtrl.create);
 //show functionality- GET request path-ing: GET /sunscreens/:id
 router.get('/:id', sunscreensCtrl.show);
 
-//POST /sunscreens/:id/reviews
+//DELETE /sunscreens/:id
+router.delete('/:id', sunscreensCtrl.delete)
 
 
 module.exports = router;

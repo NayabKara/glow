@@ -1,7 +1,7 @@
 <%- include('../partials/header') %>
 
 <h1>Sunscreen Shelf</h1>
-<table>
+<table id="table">
   <thead>
     <tr>
       <th>Brand</th>
@@ -18,6 +18,9 @@
         <a href="/sunscreens/<%= s.id %>">
           <%= s.brand %>
         </a>
+        <form action="/sunscreens/<%= s.id %>?_method=DELETE" class="deleteBtn" method="POST">
+          <button type="submit" id="delete">Delete</button>
+        </form>
       </td>
       <td><%= s.SPF %></td>
       <td><%= s.price %></td>

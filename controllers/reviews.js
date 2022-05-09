@@ -1,9 +1,11 @@
+const req = require('express/lib/request');
 const Sunscreen = require('../models/sunscreen');
 
 
 
 module.exports = {
-  create
+  create,
+ 
 };
 
 function create(req, res) {
@@ -15,3 +17,4 @@ function create(req, res) {
     });
   });
 }
+
