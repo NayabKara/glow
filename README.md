@@ -10,7 +10,7 @@ Link to Trello Board: <br>
 https://trello.com/b/Udy5gW6m/project-2
 <br>
 
-Link to App: 
+Link to App: https://glow-tracker.herokuapp.com/
 
 
 <img src="https://i.imgur.com/qZSWKqR.png" alt="homepage">
